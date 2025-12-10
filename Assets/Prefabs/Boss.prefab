@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 6400986453872871062}
   - component: {fileID: 5165049267557879243}
   - component: {fileID: 467551331243311002}
-  - component: {fileID: 5586400550403124829}
-  - component: {fileID: 3880810855815969191}
   - component: {fileID: 1085936790091690936}
   - component: {fileID: 3866469206272611721}
+  - component: {fileID: 5586400550403124829}
+  - component: {fileID: -7546360108190499331}
   m_Layer: 3
   m_Name: Boss
   m_TagString: Boss
@@ -91,6 +91,44 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1085936790091690936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75061055854326485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cde11799098c394cb5ef4e78bb6f5d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossSpeed: 2.5
+  bossSpeedPhase4: 6
+  bossLife: 10
+  phase: 4
+  radius: 1.5
+  maxTimer: 4
+  timer: 0
+  timerPhase3: 0
+  prefabBullet: {fileID: 94311617499617241, guid: 16536607d41b84c4ea74f335b4adb9cc, type: 3}
+  shootPoint: {fileID: 2559125199052586457}
+  playerLife: {fileID: 0}
+  progression: 0
+--- !u!114 &3866469206272611721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75061055854326485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb0fad8e3b2754aaeb18724ea18d2a3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InactiveMaterial: {fileID: 2100000, guid: 4968d5ad44523d340a9aa3f3bc5b1ba9, type: 2}
+  GazedAtMaterial: {fileID: 2100000, guid: e0825cc896809794197ea80df4a5cbea, type: 2}
 --- !u!65 &5586400550403124829
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -112,7 +150,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 0.99999994, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &3880810855815969191
+--- !u!54 &-7546360108190499331
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,44 +177,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &1085936790091690936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 75061055854326485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cde11799098c394cb5ef4e78bb6f5d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bossSpeed: 2.5
-  bossSpeedPhase4: 6
-  bossLife: 10
-  phase: 4
-  radius: 2
-  maxTimer: 4
-  timer: 0
-  timerPhase3: 0
-  prefabBullet: {fileID: 94311617499617241, guid: 16536607d41b84c4ea74f335b4adb9cc, type: 3}
-  shootPoint: {fileID: 2559125199052586457}
-  playerLife: {fileID: 0}
-  progression: 0
---- !u!114 &3866469206272611721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 75061055854326485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb0fad8e3b2754aaeb18724ea18d2a3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InactiveMaterial: {fileID: 0}
-  GazedAtMaterial: {fileID: 0}
 --- !u!1 &2559125199052586457
 GameObject:
   m_ObjectHideFlags: 0

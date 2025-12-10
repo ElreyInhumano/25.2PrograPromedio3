@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 2756187385365507793}
   - component: {fileID: 1033258935898615435}
   - component: {fileID: 4779723692369750754}
+  - component: {fileID: 4996532497547752868}
+  - component: {fileID: -1823851991378969231}
   - component: {fileID: 8117173746463661677}
   - component: {fileID: 8055924287583400916}
-  - component: {fileID: 4996532497547752868}
   m_Layer: 3
   m_Name: BulletEnemy
   m_TagString: Enemy
@@ -89,6 +90,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4996532497547752868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94311617499617241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d05424528fc060439b2a57afe770da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 6
+--- !u!114 &-1823851991378969231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94311617499617241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb0fad8e3b2754aaeb18724ea18d2a3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InactiveMaterial: {fileID: 2100000, guid: 1d0c8d08ecb89b64ca0ef24c59932ff2, type: 2}
+  GazedAtMaterial: {fileID: 2100000, guid: e0825cc896809794197ea80df4a5cbea, type: 2}
 --- !u!135 &8117173746463661677
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -137,16 +165,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4996532497547752868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 94311617499617241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d05424528fc060439b2a57afe770da7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletSpeed: 6

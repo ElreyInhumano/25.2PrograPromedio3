@@ -37,8 +37,8 @@ public class SpawnEnemies : MonoBehaviour
             timerBoss += Time.deltaTime;
             if (timerBoss >= 5)
             {
-                Instantiate(boss,transform.position,transform.rotation);
-                SpawnBoss(boss);
+                //Instantiate(boss,transform.position,transform.rotation);
+                //SpawnBoss(boss);
                 bossExist = true;
                 timer = 0;
             }
@@ -118,6 +118,6 @@ public class SpawnEnemies : MonoBehaviour
     void Spawn()
     {
         spawnEnemy = false;
-        Instantiate(enemies[indexEnemies], spawnpoints[indexSpawn].transform.position, spawnpoints[indexSpawn].transform.rotation);
+        Instantiate(enemies[indexEnemies], spawnpoints[indexSpawn].transform);
     }
 }

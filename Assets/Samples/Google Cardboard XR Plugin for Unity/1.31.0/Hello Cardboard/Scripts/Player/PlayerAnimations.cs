@@ -18,7 +18,7 @@ public class PlayerAnimations : MonoBehaviour
 
     void Update()
     {
-        Attack();
+        //Attack();
         if (startTime)
         {
             Timer();

@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 4860417581514983657}
   - component: {fileID: 6956715148488330522}
   - component: {fileID: 7202431528125785351}
-  - component: {fileID: 2921849936426186271}
-  - component: {fileID: 1869572837541341811}
   - component: {fileID: 6080328603987702011}
   - component: {fileID: 1985643568248691304}
+  - component: {fileID: 2921849936426186271}
+  - component: {fileID: 8120485925045844854}
   m_Layer: 3
   m_Name: Average
   m_TagString: Enemy
@@ -90,6 +90,40 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6080328603987702011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639727562995765651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e818a54ef09294746896abf821f641f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySpeed: 8
+  life: 1
+  kamikaze: 0
+  radius: 1.5
+  maxTimer: 2
+  timer: 0
+  inRange: 0
+  playerLife: {fileID: 0}
+--- !u!114 &1985643568248691304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639727562995765651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb0fad8e3b2754aaeb18724ea18d2a3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InactiveMaterial: {fileID: 2100000, guid: 74d14c7c242eaf7468f6e573cd7a4ff5, type: 2}
+  GazedAtMaterial: {fileID: 2100000, guid: e0825cc896809794197ea80df4a5cbea, type: 2}
 --- !u!65 &2921849936426186271
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -111,7 +145,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.749817, y: 1, z: 2.749817}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &1869572837541341811
+--- !u!54 &8120485925045844854
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,37 +172,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &6080328603987702011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639727562995765651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e818a54ef09294746896abf821f641f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemySpeed: 8
-  life: 1
-  kamikaze: 0
-  radius: 2
-  maxTimer: 2
-  timer: 0
-  inRange: 0
-  playerLife: {fileID: 0}
---- !u!114 &1985643568248691304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639727562995765651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb0fad8e3b2754aaeb18724ea18d2a3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InactiveMaterial: {fileID: 0}
-  GazedAtMaterial: {fileID: 0}

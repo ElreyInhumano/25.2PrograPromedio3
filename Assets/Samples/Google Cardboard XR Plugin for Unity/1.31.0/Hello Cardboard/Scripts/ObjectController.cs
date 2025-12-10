@@ -93,6 +93,7 @@ public class ObjectController : MonoBehaviour
         //SetMaterial(true);
         //SetAttack(true);
         SetAttack(true);
+        SetMaterial(true);
     }
 
     /// <summary>
@@ -102,6 +103,7 @@ public class ObjectController : MonoBehaviour
     {
         //SetMaterial(false);
         SetAttack(false);
+        SetMaterial(false);
     }
 
     /// <summary>
@@ -133,6 +135,7 @@ public class ObjectController : MonoBehaviour
         if (gazedAt)
         {
             playerAnimations.Attacking();
+            SetMaterial(false);
         }
     }
 }
