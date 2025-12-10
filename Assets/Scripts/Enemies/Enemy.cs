@@ -8,9 +8,11 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected float life;
     [SerializeField] protected bool kamikaze;
     [SerializeField] protected float radius;
+    protected ObjectController ObjectController;
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody>();
+        ObjectController = GetComponent<ObjectController>();
         player = GameObject.FindWithTag("Player");
     }
 
@@ -18,7 +20,8 @@ public abstract class Enemy : MonoBehaviour
 
     protected virtual void Update()
     {
-        if(life <= 0)
+        if (ObjectController.clicking) life -= 1;
+        if (life <= 0)
         {
             AutoDestroy();
         }
@@ -44,7 +47,7 @@ public abstract class Enemy : MonoBehaviour
     {
         if (other.CompareTag("Arm"))
         {
-            if(Input.GetMouseButtonDown(0)) life -= 1;
+            if (ObjectController.clicking) life -= 1;
 
         }
     }
@@ -52,7 +55,7 @@ public abstract class Enemy : MonoBehaviour
     {
         if (other.CompareTag("Arm"))
         {
-            if(Input.GetMouseButtonDown(0)) life -= 1;
+            if(ObjectController.clicking) life -= 1;
 
         }
     }

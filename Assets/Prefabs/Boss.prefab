@@ -107,7 +107,7 @@ MonoBehaviour:
   bossSpeedPhase4: 6
   bossLife: 10
   phase: 4
-  radius: 1.5
+  radius: 5
   maxTimer: 4
   timer: 0
   timerPhase3: 0
@@ -129,6 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InactiveMaterial: {fileID: 2100000, guid: 4968d5ad44523d340a9aa3f3bc5b1ba9, type: 2}
   GazedAtMaterial: {fileID: 2100000, guid: e0825cc896809794197ea80df4a5cbea, type: 2}
+  clicking: 0
 --- !u!65 &5586400550403124829
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -148,7 +149,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 0.99999994, z: 2}
+  m_Size: {x: 1.0339, y: 0.99999994, z: 1.0439711}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &-7546360108190499331
 Rigidbody:

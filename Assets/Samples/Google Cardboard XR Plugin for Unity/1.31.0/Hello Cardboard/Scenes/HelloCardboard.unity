@@ -172,6 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InactiveMaterial: {fileID: 2100000, guid: b5f3136c0efcb40b18050a014202c92c, type: 2}
   GazedAtMaterial: {fileID: 2100000, guid: 98e1ed660e0a3453494d31d659d7388c, type: 2}
+  clicking: 0
 --- !u!135 &148680889
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -413,7 +414,7 @@ GameObject:
   - component: {fileID: 259377129}
   - component: {fileID: 259377128}
   - component: {fileID: 259377131}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PlayerL
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -482,8 +483,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.199833, y: 1.3711317, z: 1.6238768}
-  m_Center: {x: -0.03202039, y: -0.39072394, z: 0.49633312}
+  m_Size: {x: 0.9624883, y: 0.95177263, z: 1.0079094}
+  m_Center: {x: -0.03202039, y: -0.2525196, z: 0.2779231}
 --- !u!114 &259377131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -724,20 +725,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 1199920617}
     m_Modifications:
     - target: {fileID: 789721017840561328, guid: 9867433e7fbf1494c8601e126a640787, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 303
+      objectReference: {fileID: 0}
+    - target: {fileID: 789721017840561328, guid: 9867433e7fbf1494c8601e126a640787, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 389
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 1134845943995290221, guid: 9867433e7fbf1494c8601e126a640787, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 401
+      value: 157
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147660887271622951, guid: 9867433e7fbf1494c8601e126a640787, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -309
       objectReference: {fileID: 0}
     - target: {fileID: 1147660887271622951, guid: 9867433e7fbf1494c8601e126a640787, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 406
+      value: 162.00002
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703063925135746134, guid: 9867433e7fbf1494c8601e126a640787, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -308
       objectReference: {fileID: 0}
     - target: {fileID: 3703063925135746134, guid: 9867433e7fbf1494c8601e126a640787, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -359
+      value: -195
       objectReference: {fileID: 0}
     - target: {fileID: 5722582346915294534, guid: 9867433e7fbf1494c8601e126a640787, type: 3}
       propertyPath: m_Name
@@ -1061,6 +1074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InactiveMaterial: {fileID: 2100000, guid: d273276aed64642deac3f52504ab44eb, type: 2}
   GazedAtMaterial: {fileID: 2100000, guid: e569b4a1fb5d044619efe1abc174c85f, type: 2}
+  clicking: 0
 --- !u!224 &955127926
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1399,8 +1413,16 @@ PrefabInstance:
       value: Arms
       objectReference: {fileID: 0}
     - target: {fileID: 2264314126933634243, guid: c8daa440043304a4a8798e57be01ccca, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2264314126933634243, guid: c8daa440043304a4a8798e57be01ccca, type: 3}
       propertyPath: m_TagString
       value: AnimationsPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268001784233659824, guid: c8daa440043304a4a8798e57be01ccca, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3574015965868023156, guid: c8daa440043304a4a8798e57be01ccca, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1442,6 +1464,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6736560500154567325, guid: c8daa440043304a4a8798e57be01ccca, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238045018055936119, guid: c8daa440043304a4a8798e57be01ccca, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035665231610139957, guid: c8daa440043304a4a8798e57be01ccca, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9060900514717660995, guid: c8daa440043304a4a8798e57be01ccca, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206004132908191548, guid: c8daa440043304a4a8798e57be01ccca, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1475,12 +1517,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.27001995, y: 0.27001995, z: 0.27001995}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.4248326, y: 0.61318535, z: 0.49053752}
+  m_Center: {x: 0.21631251, y: -0.17158273, z: 0.474369}
 --- !u!850595691 &1347003812
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -1708,6 +1750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InactiveMaterial: {fileID: 2100000, guid: 026c99290ad2d42e98195d21d1c5a21d, type: 2}
   GazedAtMaterial: {fileID: 2100000, guid: 4cc7d26a25d984c5b876a1faafcf6235, type: 2}
+  clicking: 0
 --- !u!135 &1490385954
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2134,6 +2177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InactiveMaterial: {fileID: 2100000, guid: c649fe3fd6567d545ba6f1a4262b2b2f, type: 2}
   GazedAtMaterial: {fileID: 2100000, guid: e0825cc896809794197ea80df4a5cbea, type: 2}
+  clicking: 0
 --- !u!65 &1892220232
 BoxCollider:
   m_ObjectHideFlags: 0

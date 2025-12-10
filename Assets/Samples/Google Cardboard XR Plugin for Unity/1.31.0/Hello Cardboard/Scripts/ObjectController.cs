@@ -45,6 +45,7 @@ public class ObjectController : MonoBehaviour
     private Renderer _myRenderer;
     private PlayerAnimations playerAnimations;
     private Vector3 _startingPosition;
+    public bool clicking;
 
     /// <summary>
     /// Start is called before the first frame update.
@@ -54,7 +55,7 @@ public class ObjectController : MonoBehaviour
         _startingPosition = transform.parent.localPosition;
         playerAnimations = GameObject.FindWithTag("AnimationsPlayer").GetComponent<PlayerAnimations>();
         _myRenderer = GetComponent<Renderer>();
-        //SetMaterial(false);
+        SetMaterial(false);
         SetAttack(false);
     }
 
@@ -92,8 +93,6 @@ public class ObjectController : MonoBehaviour
     {
         //SetMaterial(true);
         //SetAttack(true);
-        SetAttack(true);
-        SetMaterial(true);
     }
 
     /// <summary>
@@ -102,8 +101,6 @@ public class ObjectController : MonoBehaviour
     public void OnPointerExit()
     {
         //SetMaterial(false);
-        SetAttack(false);
-        SetMaterial(false);
     }
 
     /// <summary>
@@ -113,7 +110,9 @@ public class ObjectController : MonoBehaviour
     public void OnPointerClick()
     {
         //TeleportRandomly();
+        SetMaterial(true);
         SetAttack(true);
+        clicking = true;
     }
 
     /// <summary>
@@ -135,7 +134,7 @@ public class ObjectController : MonoBehaviour
         if (gazedAt)
         {
             playerAnimations.Attacking();
-            SetMaterial(false);
+            clicking = false;
         }
     }
 }
