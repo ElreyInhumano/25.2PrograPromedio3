@@ -43,6 +43,7 @@ public class ObjectController : MonoBehaviour
     private const float _maxObjectHeight = 3.5f;
 
     private Renderer _myRenderer;
+    private PlayerAnimations playerAnimations;
     private Vector3 _startingPosition;
 
     /// <summary>
@@ -51,8 +52,10 @@ public class ObjectController : MonoBehaviour
     public void Start()
     {
         _startingPosition = transform.parent.localPosition;
+        playerAnimations = GameObject.FindWithTag("AnimationsPlayer").GetComponent<PlayerAnimations>();
         _myRenderer = GetComponent<Renderer>();
-        SetMaterial(false);
+        //SetMaterial(false);
+        SetAttack(false);
     }
 
     /// <summary>
@@ -78,7 +81,8 @@ public class ObjectController : MonoBehaviour
 
         randomSib.SetActive(true);
         gameObject.SetActive(false);
-        SetMaterial(false);
+        //SetMaterial(false);
+        SetAttack(false);
     }
 
     /// <summary>
@@ -86,7 +90,9 @@ public class ObjectController : MonoBehaviour
     /// </summary>
     public void OnPointerEnter()
     {
-        SetMaterial(true);
+        //SetMaterial(true);
+        //SetAttack(true);
+        SetAttack(true);
     }
 
     /// <summary>
@@ -94,7 +100,8 @@ public class ObjectController : MonoBehaviour
     /// </summary>
     public void OnPointerExit()
     {
-        SetMaterial(false);
+        //SetMaterial(false);
+        SetAttack(false);
     }
 
     /// <summary>
@@ -103,7 +110,8 @@ public class ObjectController : MonoBehaviour
     /// </summary>
     public void OnPointerClick()
     {
-        TeleportRandomly();
+        //TeleportRandomly();
+        SetAttack(true);
     }
 
     /// <summary>
@@ -118,6 +126,13 @@ public class ObjectController : MonoBehaviour
         if (InactiveMaterial != null && GazedAtMaterial != null)
         {
             _myRenderer.material = gazedAt ? GazedAtMaterial : InactiveMaterial;
+        }
+    }
+    private void SetAttack(bool gazedAt)
+    {
+        if (gazedAt)
+        {
+            playerAnimations.Attacking();
         }
     }
 }
