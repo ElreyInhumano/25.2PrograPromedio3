@@ -28,7 +28,6 @@ public class ObjectController : MonoBehaviour
     /// The material to use when this object is inactive (not being gazed at).
     /// </summary>
     public Material InactiveMaterial;
-
     /// <summary>
     /// The material to use when this object is active (gazed at).
     /// </summary>
@@ -42,17 +41,18 @@ public class ObjectController : MonoBehaviour
     private const float _minObjectHeight = 0.5f;
     private const float _maxObjectHeight = 3.5f;
 
+    private PlayerAnimations animations;
     private Renderer _myRenderer;
     private Vector3 _startingPosition;
-
     /// <summary>
     /// Start is called before the first frame update.
     /// </summary>
     public void Start()
     {
         _startingPosition = transform.parent.localPosition;
+        animations = GetComponent<PlayerAnimations>();
         _myRenderer = GetComponent<Renderer>();
-        SetMaterial(false);
+        //SetMaterial(false);
     }
 
     /// <summary>
@@ -78,7 +78,7 @@ public class ObjectController : MonoBehaviour
 
         randomSib.SetActive(true);
         gameObject.SetActive(false);
-        SetMaterial(false);
+        //SetMaterial(false);
     }
 
     /// <summary>
@@ -86,7 +86,8 @@ public class ObjectController : MonoBehaviour
     /// </summary>
     public void OnPointerEnter()
     {
-        SetMaterial(true);
+        //SetMaterial(true);
+        SetAnimations(true);
     }
 
     /// <summary>
@@ -94,7 +95,8 @@ public class ObjectController : MonoBehaviour
     /// </summary>
     public void OnPointerExit()
     {
-        SetMaterial(false);
+        //SetMaterial(false);
+        SetAnimations(false);
     }
 
     /// <summary>
@@ -118,6 +120,35 @@ public class ObjectController : MonoBehaviour
         if (InactiveMaterial != null && GazedAtMaterial != null)
         {
             _myRenderer.material = gazedAt ? GazedAtMaterial : InactiveMaterial;
+        }
+    }
+    private void SetAnimations(bool gazedAt)
+    {
+        if (animations != null)
+        {
+            if (gazedAt)
+            {
+                if (animations.attackB1)
+                {
+                    animations.Attack1();
+                }
+                if (animations.attackB2)
+                {
+                    animations.Attack2();
+                }
+                if (animations.attackB3)
+                {
+                    animations.Attack3();
+                }
+                if (animations.attackB4)
+                {
+                    animations.Attack4();
+                }
+                if (animations.attackB5)
+                {
+                    animations.Attack5();
+                }
+            }
         }
     }
 }
