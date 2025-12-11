@@ -31,7 +31,8 @@ public abstract class Enemy : MonoBehaviour
     {
         Levels.enemiesKilled += 1;
         Levels.enemiesKilledTotal += 1;
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+        //Destroy(gameObject);
     }
 
     private void OnCollisionEnter(Collision collision)

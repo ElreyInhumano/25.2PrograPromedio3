@@ -100,7 +100,7 @@ public class ObjectController : MonoBehaviour
     /// </summary>
     public void OnPointerExit()
     {
-        //SetMaterial(false);
+        SetMaterial(false);
     }
 
     /// <summary>
